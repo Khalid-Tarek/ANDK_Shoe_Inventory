@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Shoe Inventory</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="loginFragmentLabel">Login</string>
+    <string name="welcomeFragmentLabel">Welcome!</string>
+    <string name="instructionsFragmentLabel">Instructions</string>
+    <string name="listingFragmentLabel">Listing</string>
+    <string name="detailsFragmentLabel">Details</string>
+
+    <string name="stringEmailLabel">Email</string>
+    <string name="stringPasswordLabel">Password</string>
+
+    <string name="stringCreateButton">Create</string>
+    <string name="stringLoginButton">Login</string>
+</resources>

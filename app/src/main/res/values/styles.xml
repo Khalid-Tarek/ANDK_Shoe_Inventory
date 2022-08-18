@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="styleWrappedContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="styleEditTextViews">
+        <item name="android:layout_width">@dimen/dimenEditTextWidth</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">@dimen/dimenLargeMargin</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="styleTitle" parent="styleWrappedContent">
+        <item name="android:layout_marginTop">@dimen/dimenMediumMargin</item>
+        <item name="android:textSize">@dimen/dimenTitleSize</item>
+    </style>
+
+    <style name="styleButtons" parent="styleWrappedContent">
+        <item name="android:layout_marginBottom">@dimen/dimenMediumMargin</item>
+    </style>
+
+</resources>
