@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Constraint layout is used in this activity as using Relative or Linear Layout
+     would only make it harder to place the views in this imagined order-->
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -8,30 +11,24 @@
 
     <TextView
         style="@style/styleTitle"
-
-        android:id="@+id/loginFragmentTitle"
         android:text="@string/loginFragmentLabel"
-
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         style="@style/styleWrappedContent"
-
         android:labelFor="@+id/emailEditText"
         android:text="@string/stringEmailLabel"
-
         app:layout_constraintBottom_toTopOf="@id/emailEditText"
         app:layout_constraintEnd_toEndOf="@id/emailEditText"
         app:layout_constraintStart_toStartOf="@id/emailEditText" />
 
     <EditText
-        style="@style/styleEditTextViews"
         android:id="@+id/emailEditText"
+        style="@style/styleEditTextViews"
         android:autofillHints="emailAddress"
         android:inputType="textEmailAddress"
-
         app:layout_constraintBottom_toTopOf="@+id/passwordEditText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -40,39 +37,34 @@
 
     <TextView
         style="@style/styleWrappedContent"
-
         android:labelFor="@id/passwordEditText"
         android:text="@string/stringPasswordLabel"
-
         app:layout_constraintBottom_toTopOf="@id/passwordEditText"
         app:layout_constraintEnd_toEndOf="@id/passwordEditText"
         app:layout_constraintStart_toStartOf="@id/passwordEditText" />
 
     <EditText
-        style="@style/styleEditTextViews"
         android:id="@+id/passwordEditText"
+        style="@style/styleEditTextViews"
         android:importantForAutofill="no"
         android:inputType="textPassword"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/emailEditText" />
 
     <Button
-        style="@style/styleButtons"
         android:id="@+id/loginButton"
+        style="@style/styleButtons"
         android:text="@string/stringLoginButton"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/createButton" />
 
     <Button
-        style="@style/styleButtons"
         android:id="@+id/createButton"
+        style="@style/styleButtons"
         android:text="@string/stringCreateButton"
-
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/loginButton"
         app:layout_constraintStart_toStartOf="parent" />

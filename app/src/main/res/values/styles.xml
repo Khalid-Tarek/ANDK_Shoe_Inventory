@@ -13,8 +13,11 @@
         <item name="android:minHeight">48dp</item>
     </style>
 
-    <style name="styleTitle" parent="styleWrappedContent">
-        <item name="android:layout_marginTop">@dimen/dimenMediumMargin</item>
+    <style name="styleText" parent="styleWrappedContent">
+        <item name="android:layout_margin">@dimen/dimenMediumMargin</item>
+    </style>
+
+    <style name="styleTitle" parent="styleText">
         <item name="android:textSize">@dimen/dimenTitleSize</item>
     </style>
 

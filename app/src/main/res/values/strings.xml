@@ -14,4 +14,9 @@
 
     <string name="stringCreateButton">Create</string>
     <string name="stringLoginButton">Login</string>
+    <string name="stringNextButton">Next</string>
+    <string name="stringAddButton">Add</string>
+
+    <string name="stringWelcomeBody">lorem ipsum</string>
+    <string name="stringInstructionsBody">lorem ipsum</string>
 </resources>
