@@ -19,4 +19,6 @@
 
     <string name="stringWelcomeBody">lorem ipsum</string>
     <string name="stringInstructionsBody">lorem ipsum</string>
+    <string name="stringShoeImageDescription">Image of a Shoe</string>
+    <string name="stringLogOut">Log Out</string>
 </resources>

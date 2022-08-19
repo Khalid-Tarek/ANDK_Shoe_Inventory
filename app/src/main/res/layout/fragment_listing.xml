@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!-- RelativeLayout is used here to help place a FAB over the scrollview-->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RelativeLayout is used here to help place a FAB over the scrollview-->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"

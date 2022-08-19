@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="dimenEditTextWidth">256dp</dimen>
+
     <dimen name="dimenMediumMargin">16dp</dimen>
     <dimen name="dimenLargeMargin">32dp</dimen>
+
+    <dimen name="dimenImageSize">64dp</dimen>
+
     <dimen name="dimenTitleSize">32sp</dimen>
+    <dimen name="dimenMediumTextSize">18sp</dimen>
+    <dimen name="dimenSmallMargin">8dp</dimen>
 </resources>
