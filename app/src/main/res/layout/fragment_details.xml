@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="myShoe"
             type="models.Shoe" />
@@ -18,8 +19,8 @@
         <TextView
             android:id="@+id/labelShoeName"
             style="@style/styleWrappedContent"
-            android:text="@string/stringShoeName"
             android:labelFor="@id/editShoeName"
+            android:text="@string/stringShoeName"
             app:layout_constraintBottom_toBottomOf="@id/editShoeName"
             app:layout_constraintEnd_toStartOf="@id/editShoeName"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,8 +40,8 @@
         <TextView
             android:id="@+id/labelShoeBrand"
             style="@style/styleWrappedContent"
-            android:text="@string/stringShoeBrand"
             android:labelFor="@id/editShoeBrand"
+            android:text="@string/stringShoeBrand"
             app:layout_constraintBottom_toBottomOf="@id/editShoeBrand"
             app:layout_constraintEnd_toStartOf="@id/editShoeBrand"
             app:layout_constraintStart_toStartOf="parent"
@@ -60,8 +61,8 @@
         <TextView
             android:id="@+id/labelShoeSize"
             style="@style/styleWrappedContent"
-            android:text="@string/stringShoeSize"
             android:labelFor="@id/editShoeSize"
+            android:text="@string/stringShoeSize"
             app:layout_constraintBottom_toBottomOf="@id/editShoeSize"
             app:layout_constraintEnd_toStartOf="@id/editShoeSize"
             app:layout_constraintStart_toStartOf="parent"
@@ -81,8 +82,8 @@
         <TextView
             android:id="@+id/labelShoeDescription"
             style="@style/styleWrappedContent"
-            android:text="@string/stringShoeDescription"
             android:labelFor="@id/editShoeDescription"
+            android:text="@string/stringShoeDescription"
             app:layout_constraintBottom_toBottomOf="@id/editShoeDescription"
             app:layout_constraintEnd_toStartOf="@id/editShoeDescription"
             app:layout_constraintStart_toStartOf="parent"
@@ -102,13 +103,13 @@
         <Button
             android:id="@+id/buttonCancel"
             style="@style/styleButtons"
+            android:backgroundTint="@android:color/holo_red_dark"
             android:text="@string/stringCancelButton"
             app:layout_constraintBottom_toBottomOf="@+id/buttonSave"
             app:layout_constraintEnd_toStartOf="@id/buttonSave"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/buttonSave"
-            app:layout_constraintVertical_bias="0.0"
-            android:backgroundTint="@android:color/holo_red_dark" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/buttonSave"

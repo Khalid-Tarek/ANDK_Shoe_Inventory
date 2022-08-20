@@ -24,7 +24,6 @@ class DetailsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         viewModel = ViewModelProvider(requireActivity())[ListViewModel::class.java]
         binding = FragmentDetailsBinding.inflate(inflater, container, false)
         binding.apply {
@@ -34,7 +33,7 @@ class DetailsFragment : Fragment() {
         val shoe = arguments?.getParcelable<Shoe>("shoe")
 
         shoe?.let {
-            binding.myShoe = shoe
+            binding.myShoe = it
             turnOffEditing()
             hideButtons()
         } ?: run {

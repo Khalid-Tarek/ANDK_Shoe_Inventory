@@ -5,9 +5,9 @@ import android.util.Log
 import android.view.*
 import android.widget.LinearLayout
 import androidx.core.os.bundleOf
-import androidx.fragment.app.Fragment
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
@@ -31,13 +31,11 @@ class ListingFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        // Inflate the layout for this fragment
         val binding = FragmentListingBinding.inflate(inflater)
 
         viewModel = ViewModelProvider(requireActivity())[ListViewModel::class.java]
 
         menuHost = requireActivity()
-
         myMenuProvider = getMenuProvider()
         menuHost.addMenuProvider(myMenuProvider)
 
@@ -80,20 +78,23 @@ class ListingFragment : Fragment() {
         val bundle = bundleOf("shoe" to shoe)
 
         binding.root.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_listingFragment_to_detailsFragment, bundle)
+            Navigation.createNavigateOnClickListener(
+                R.id.action_listingFragment_to_detailsFragment,
+                bundle
+            )
         )
 
         shoeListView.addView(binding.root)
     }
 
     private fun getMenuProvider(): MenuProvider {
-        return object: MenuProvider {
+        return object : MenuProvider {
             override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
                 menuInflater.inflate(R.menu.my_menu, menu)
             }
 
             override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                if(menuItem.itemId == R.id.logout){
+                if (menuItem.itemId == R.id.logout) {
                     findNavController().navigate(R.id.action_listingFragment_to_loginFragment)
                     return true
                 }

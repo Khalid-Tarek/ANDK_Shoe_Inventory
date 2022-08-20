@@ -7,9 +7,9 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimenSmallMargin"
         app:cardBackgroundColor="#ddbbdd"
-        app:cardCornerRadius="8dp"
-        android:layout_margin="@dimen/dimenSmallMargin">
+        app:cardCornerRadius="8dp">
 
         <!-- ConstraintLayout is used here since the design is a bit more complex than a Linear Layout
          could achieve. Relative Layout could also be used here -->
@@ -56,12 +56,12 @@
             <TextView
                 android:id="@+id/shoeDescription"
                 style="@style/styleWrappedContent"
-                android:maxWidth="256dp"
-                app:layout_constraintStart_toEndOf="@id/shoeImage"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/shoeName"
                 android:layout_margin="@dimen/dimenMediumMargin"
+                android:maxWidth="256dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/shoeImage"
+                app:layout_constraintTop_toBottomOf="@id/shoeName"
                 tools:text=" lorem ipsum " />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
