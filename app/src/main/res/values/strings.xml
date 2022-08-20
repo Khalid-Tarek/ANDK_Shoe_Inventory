@@ -16,9 +16,16 @@
     <string name="stringLoginButton">Login</string>
     <string name="stringNextButton">Next</string>
     <string name="stringAddButton">Add</string>
+    <string name="stringCancelButton">Cancel</string>
+    <string name="stringSaveButton">Save</string>
 
     <string name="stringWelcomeBody">lorem ipsum</string>
     <string name="stringInstructionsBody">lorem ipsum</string>
     <string name="stringShoeImageDescription">Image of a Shoe</string>
     <string name="stringLogOut">Log Out</string>
+
+    <string name="stringShoeName">Name</string>
+    <string name="stringShoeBrand">Brand</string>
+    <string name="stringShoeSize">Size</string>
+    <string name="stringShoeDescription">Description</string>
 </resources>

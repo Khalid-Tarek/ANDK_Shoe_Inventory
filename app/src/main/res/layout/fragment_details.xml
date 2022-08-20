@@ -1,14 +1,125 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".DetailsFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="myShoe"
+            type="models.Shoe" />
+    </data>
+
+    <!-- ConstraintLayout is used here as this design would need nested LinearLayouts to achieve-->
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        tools:context=".DetailsFragment">
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/labelShoeName"
+            style="@style/styleWrappedContent"
+            android:text="@string/stringShoeName"
+            android:labelFor="@id/editShoeName"
+            app:layout_constraintBottom_toBottomOf="@id/editShoeName"
+            app:layout_constraintEnd_toStartOf="@id/editShoeName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editShoeName" />
+
+        <EditText
+            android:id="@+id/editShoeName"
+            style="@style/styleEditTextViews"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="@={myShoe.name}"
+            app:layout_constraintBottom_toTopOf="@id/editShoeBrand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/labelShoeName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/labelShoeBrand"
+            style="@style/styleWrappedContent"
+            android:text="@string/stringShoeBrand"
+            android:labelFor="@id/editShoeBrand"
+            app:layout_constraintBottom_toBottomOf="@id/editShoeBrand"
+            app:layout_constraintEnd_toStartOf="@id/editShoeBrand"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editShoeBrand" />
+
+        <EditText
+            android:id="@+id/editShoeBrand"
+            style="@style/styleEditTextViews"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="@={myShoe.company}"
+            app:layout_constraintBottom_toTopOf="@id/editShoeSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/labelShoeBrand"
+            app:layout_constraintTop_toBottomOf="@id/editShoeName" />
+
+        <TextView
+            android:id="@+id/labelShoeSize"
+            style="@style/styleWrappedContent"
+            android:text="@string/stringShoeSize"
+            android:labelFor="@id/editShoeSize"
+            app:layout_constraintBottom_toBottomOf="@id/editShoeSize"
+            app:layout_constraintEnd_toStartOf="@id/editShoeSize"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editShoeSize" />
+
+        <EditText
+            android:id="@+id/editShoeSize"
+            style="@style/styleEditTextViews"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:text="@={`` + myShoe.size}"
+            app:layout_constraintBottom_toTopOf="@id/editShoeDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/labelShoeSize"
+            app:layout_constraintTop_toBottomOf="@id/editShoeBrand" />
+
+        <TextView
+            android:id="@+id/labelShoeDescription"
+            style="@style/styleWrappedContent"
+            android:text="@string/stringShoeDescription"
+            android:labelFor="@id/editShoeDescription"
+            app:layout_constraintBottom_toBottomOf="@id/editShoeDescription"
+            app:layout_constraintEnd_toStartOf="@id/editShoeDescription"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/editShoeDescription" />
+
+        <EditText
+            android:id="@+id/editShoeDescription"
+            style="@style/styleEditTextViews"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:text="@={myShoe.description}"
+            app:layout_constraintBottom_toTopOf="@id/buttonSave"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/labelShoeDescription"
+            app:layout_constraintTop_toBottomOf="@id/editShoeSize" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            style="@style/styleButtons"
+            android:text="@string/stringCancelButton"
+            app:layout_constraintBottom_toBottomOf="@+id/buttonSave"
+            app:layout_constraintEnd_toStartOf="@id/buttonSave"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/buttonSave"
+            app:layout_constraintVertical_bias="0.0"
+            android:backgroundTint="@android:color/holo_red_dark" />
+
+        <Button
+            android:id="@+id/buttonSave"
+            style="@style/styleButtons"
+            android:backgroundTint="@android:color/holo_green_dark"
+            android:text="@string/stringSaveButton"
+            android:textColor="#212121"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/buttonCancel"
+            app:layout_constraintTop_toBottomOf="@+id/editShoeDescription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

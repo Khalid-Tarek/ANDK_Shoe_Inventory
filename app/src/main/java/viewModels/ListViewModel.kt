@@ -25,5 +25,6 @@ class ListViewModel: ViewModel() {
 
     fun addShoe(newShoe: Shoe) {
         _shoeList.value?.add(newShoe)
+        _shoeList.value = _shoeList.value
     }
 }

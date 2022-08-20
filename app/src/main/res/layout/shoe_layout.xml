@@ -1,71 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<!-- Using CardView to make the layout look a bit better-->
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardBackgroundColor="#ddbbdd"
-    app:cardCornerRadius="8dp"
-    android:layout_margin="@dimen/dimenSmallMargin">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- ConstraintLayout is used here since the design is a bit more complex than a Linear Layout
-     could achieve. Relative Layout could also be used here -->
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <!-- Using CardView to make the layout look a bit better-->
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#ddbbdd"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="@dimen/dimenSmallMargin">
 
-        <ImageView
-            android:id="@+id/shoeImage"
-            android:layout_width="@dimen/dimenImageSize"
-            android:layout_height="@dimen/dimenImageSize"
-            android:layout_margin="@dimen/dimenMediumMargin"
-            android:contentDescription="@string/stringShoeImageDescription"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:src="@color/purple_200" />
+        <!-- ConstraintLayout is used here since the design is a bit more complex than a Linear Layout
+         could achieve. Relative Layout could also be used here -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/shoeName"
-            style="@style/styleWrappedContent"
-            android:textSize="@dimen/dimenMediumTextSize"
-            app:layout_constraintEnd_toStartOf="@id/shoeBrand"
-            app:layout_constraintStart_toEndOf="@id/shoeImage"
-            app:layout_constraintTop_toTopOf="@id/shoeImage"
-            tools:text="Killshot2" />
+            <ImageView
+                android:id="@+id/shoeImage"
+                android:layout_width="@dimen/dimenImageSize"
+                android:layout_height="@dimen/dimenImageSize"
+                android:layout_margin="@dimen/dimenMediumMargin"
+                android:contentDescription="@string/stringShoeImageDescription"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@color/purple_200" />
 
-        <TextView
-            android:id="@+id/shoeBrand"
-            style="@style/styleWrappedContent"
-            app:layout_constraintEnd_toStartOf="@id/shoeSize"
-            app:layout_constraintStart_toEndOf="@id/shoeName"
-            app:layout_constraintTop_toTopOf="@+id/shoeImage"
-            tools:text="Nike" />
+            <TextView
+                android:id="@+id/shoeName"
+                style="@style/styleWrappedContent"
+                android:textSize="@dimen/dimenMediumTextSize"
+                app:layout_constraintEnd_toStartOf="@id/shoeBrand"
+                app:layout_constraintStart_toEndOf="@id/shoeImage"
+                app:layout_constraintTop_toTopOf="@id/shoeImage"
+                tools:text="Killshot2" />
 
-        <TextView
-            android:id="@+id/shoeSize"
-            style="@style/styleWrappedContent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/shoeBrand"
-            app:layout_constraintTop_toTopOf="@+id/shoeImage"
-            tools:text="Size: 18" />
+            <TextView
+                android:id="@+id/shoeBrand"
+                style="@style/styleWrappedContent"
+                app:layout_constraintEnd_toStartOf="@id/shoeSize"
+                app:layout_constraintStart_toEndOf="@id/shoeName"
+                app:layout_constraintTop_toTopOf="@+id/shoeImage"
+                tools:text="Nike" />
 
-        <TextView
-            android:id="@+id/shoeDescription"
-            style="@style/styleWrappedContent"
-            android:maxWidth="256dp"
-            app:layout_constraintStart_toEndOf="@id/shoeImage"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/shoeName"
-            android:layout_margin="@dimen/dimenMediumMargin"
-            tools:text=" lorem ipsum "/>
+            <TextView
+                android:id="@+id/shoeSize"
+                style="@style/styleWrappedContent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/shoeBrand"
+                app:layout_constraintTop_toTopOf="@+id/shoeImage"
+                tools:text="Size: 18" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/shoeDescription"
+                style="@style/styleWrappedContent"
+                android:maxWidth="256dp"
+                app:layout_constraintStart_toEndOf="@id/shoeImage"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/shoeName"
+                android:layout_margin="@dimen/dimenMediumMargin"
+                tools:text=" lorem ipsum " />
 
-</androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
 
 

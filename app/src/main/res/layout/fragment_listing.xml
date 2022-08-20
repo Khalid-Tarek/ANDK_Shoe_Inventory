@@ -1,34 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- RelativeLayout is used here to help place a FAB over the scrollview-->
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ListingFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <!-- Specified in the project rubric -->
-    <ScrollView
+    <!-- RelativeLayout is used here to help place a FAB over the scrollview-->
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".ListingFragment">
 
         <!-- Specified in the project rubric -->
-        <LinearLayout
-            android:id="@+id/shoeList"
+        <ScrollView
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Specified in the project rubric -->
+            <LinearLayout
+                android:id="@+id/shoeList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+        </ScrollView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/stringAddButton"
+            android:src="@android:drawable/ic_input_add" />
 
-    </ScrollView>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="end|bottom"
-        android:layout_margin="16dp"
-        android:contentDescription="@string/stringAddButton"
-        android:src="@android:drawable/ic_input_add" />
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>

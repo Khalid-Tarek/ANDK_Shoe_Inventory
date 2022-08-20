@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- LinearLayout is used here because the design for this screen is simple enough -->
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    tools:context=".WelcomeFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <!-- LinearLayout is used here because the design for this screen is simple enough -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:context=".WelcomeFragment">
 
-    <TextView
-        style="@style/styleTitle"
-        android:text="@string/instructionsFragmentLabel" />
+        <TextView
+            style="@style/styleTitle"
+            android:text="@string/instructionsFragmentLabel" />
 
-    <TextView
-        style="@style/styleText"
-        android:text="@string/stringInstructionsBody"/>
+        <TextView
+            style="@style/styleText"
+            android:text="@string/stringInstructionsBody" />
 
-    <Button
-        android:id="@+id/nextButton"
-        style="@style/styleButtons"
-        android:text="@string/stringNextButton"/>
+        <Button
+            android:id="@+id/nextButton"
+            style="@style/styleButtons"
+            android:text="@string/stringNextButton" />
 
-</LinearLayout>
+    </LinearLayout>
+</layout>
